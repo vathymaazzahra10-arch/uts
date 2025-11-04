@@ -6,6 +6,18 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('produk', function () {
-    return view('Produk');
+Route::get('/produk', function () {
+    // Array data produk
+    $produk = [
+        ['kode' => 'BRG001', 'nama' => 'Pena', 'jenis' => 'Alat tulis', 'harga' => 20000],
+        ['kode' => 'BRG002', 'nama' => 'Buku', 'jenis' => 'Alat tulis', 'harga' => 15000],
+    ];
+
+    // Kirim ke view
+    return view('produk', ['produk' => $produk]);
+});
+
+// Route untuk form tambah produk
+Route::get('/produk/tambah', function () {
+    return view('tambah-produk');
 });

@@ -129,8 +129,8 @@
     <div id="sidebar" class="sidebar">
         <button class="close-btn" onclick="toggleSidebar()">×</button>
         <h4>UTS Laravel</h4>
-        <a href="#">Home</a>
-        <a href="#">Produk</a>
+        <a href="/">Home</a>
+        <a href="/produk">Produk</a>
         <div class="search-box">
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
