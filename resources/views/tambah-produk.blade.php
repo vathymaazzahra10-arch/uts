@@ -119,16 +119,14 @@
           <label class="form-label">Jenis Produk</label>
           <select name="jenis" class="form-select" required>
             <option value="">Pilih Produk</option>
-            <option value="Elektronik">Elektronik</option>
-            <option value="Pakaian">Pakaian</option>
-            <option value="Makanan">Makanan</option>
-            <option value="Alat tulis">Alat tulis</option>
-            <option value="Lainnya">Lainnya</option>
+            @foreach ($jenisProduk as $item)
+              <option value="{{ $item }}">{{ $item }}</option>
+            @endforeach
           </select>
         </div>
       </div>
 
-      <!-- Harga dan Tombol Simpan sejajar 50%-50% -->
+      <!-- Harga dan Tombol Simpan sejajar -->
       <div class="row mb-3 align-items-end">
         <div class="col-md-6">
           <label class="form-label">Harga</label>
